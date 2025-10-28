@@ -120,7 +120,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="71767e48-4f8f-4760-86cd-3ca328da375a";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 
 		// Example 1: run a Bot scenario
-$crisp.push(["do", "bot:scenario:run", ["scenario_d86f6d3e-4bc4-49a0-97a2-a3dd7460c1f1"]]);		
+$crisp.push(["on", "chat:opened", function() {
+    $crisp.push(["do", "bot:scenario:run", ["scenario_d86f6d3e-4bc4-49a0-97a2-a3dd7460c1f1"]]);
+}]);		
 	
 	</head>
 
